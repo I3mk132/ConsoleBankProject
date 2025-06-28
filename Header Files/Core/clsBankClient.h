@@ -48,7 +48,7 @@ private:
         std::fstream File;
         std::vector<clsBankClient> vClients;
 
-        File.open("Clients.txt", std::ios::in); // Read Mode
+        File.open("Database/Clients.txt", std::ios::in); // Read Mode
         if (File.is_open()) {
             std::string Line;
             while (getline(File, Line)) {
@@ -64,7 +64,7 @@ private:
 
         std::fstream File;
 
-        File.open("Clients.txt", std::ios::out); // Write mode
+        File.open("Database/Clients.txt", std::ios::out); // Write mode
         if (File.is_open()) {
             std::string Line;
             for (clsBankClient& C : vClients) {
@@ -80,7 +80,7 @@ private:
     static void _AddDataLineToFile(std::string stDataLine){
         std::fstream File;
 
-        File.open("Clients.txt", std::ios::out | std::ios::app);
+        File.open("Database/Clients.txt", std::ios::out | std::ios::app);
 
         if (File.is_open()){
 
@@ -126,7 +126,7 @@ private:
         std::string DataLine = _PrepareTransferLogRecord(Destination, Amount, Username);
 
         std::fstream File;
-        File.open("TransferLog.txt", std::ios::out | std::ios::app);
+        File.open("Database/TransferLog.txt", std::ios::out | std::ios::app);
         if (File.is_open()) {
             File << DataLine << std::endl;
             File.close();
@@ -214,7 +214,7 @@ public:
         std::fstream File;
         std::vector <clsBankClient> vClients;
 
-        File.open("Clients.txt", std::ios::in );
+        File.open("Database/Clients.txt", std::ios::in );
         if (File.is_open()) {
             std::string Line;
             while (getline(File, Line)) {
@@ -236,7 +236,7 @@ public:
         std::fstream File;
         std::vector <clsBankClient> vClients;
 
-        File.open("Clients.txt", std::ios::in);
+        File.open("Database/Clients.txt", std::ios::in);
         if (File.is_open()) {
             std::string Line;
             while (getline(File, Line)) {
@@ -366,7 +366,7 @@ public:
         std::vector<stTransferLog> vTransferRecord;
 
         std::fstream File;
-        File.open("TransferLog.txt", std::ios::in); // read mode
+        File.open("Database/TransferLog.txt", std::ios::in); // read mode
 
         if (File.is_open()){
             std::string Line;

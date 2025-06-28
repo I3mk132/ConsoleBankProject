@@ -163,6 +163,13 @@
     <ClInclude Include="Header Files\Screens\User\clsUpdateUserScreen.h" />
     <ClInclude Include="Header Files\Screens\User\clsUsersListScreen.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Database\Clients.txt" />
+    <Text Include="Database\Currencies.txt" />
+    <Text Include="Database\Log.txt" />
+    <Text Include="Database\TransfareLog.txt" />
+    <Text Include="Database\Users.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

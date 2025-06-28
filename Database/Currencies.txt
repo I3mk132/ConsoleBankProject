@@ -1,0 +1,10 @@
+USA#//#USD#//#US Dollar#//#1.0
+Eurozone#//#EUR#//#Euro#//#0.92
+United Kingdom#//#GBP#//#British Pound#//#0.79
+Canada#//#CAD#//#Canadian Dollar#//#1.37
+Australia#//#AUD#//#Australian Dollar#//#1.50
+Japan#//#JPY#//#Japanese Yen#//#157.30
+Switzerland#//#CHF#//#Swiss Franc#//#0.89
+China#//#CNY#//#Chinese Yuan#//#7.25
+India#//#INR#//#Indian Rupee#//#83.45
+Brazil#//#BRL#//#Brazilian Real#//#5.43

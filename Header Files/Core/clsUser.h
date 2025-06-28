@@ -46,7 +46,7 @@ private:
         std::vector<clsUser> vUser;
         std::fstream File;
 
-        File.open("Users.txt", std::ios::in); // read mode
+        File.open("Database/Users.txt", std::ios::in); // read mode
         if (File.is_open()){
             std::string Line;
             while (getline(File, Line)){
@@ -60,7 +60,7 @@ private:
     static void _SaveUsersDataToFile(std::vector<clsUser> vUsers){
         std::fstream File;
 
-        File.open("Users.txt", std::ios::out); // Write mode
+        File.open("Database/Users.txt", std::ios::out); // Write mode
         if (File.is_open()){
             for (clsUser& U : vUsers){
                 if (!U._MarkedForDelete){
@@ -78,7 +78,7 @@ private:
 
     static void _AddDataLineToFile(std::string Line){
         std::fstream File;
-        File.open("Users.txt", std::ios::out | std::ios::app); // Append mode
+        File.open("Database/Users.txt", std::ios::out | std::ios::app); // Append mode
 
         if (File.is_open()){
             File << Line << std::endl;
@@ -207,7 +207,7 @@ public:
 
     static clsUser Find(std::string Username) {
         std::fstream MyFile;
-        MyFile.open("Users.txt", std::ios::in);//read Mode
+        MyFile.open("Database/Users.txt", std::ios::in);//read Mode
 
         if (MyFile.is_open()) {
             std::string Line;
@@ -228,7 +228,7 @@ public:
 
     static clsUser Find(std::string Username, std::string Password) {
         std::fstream MyFile;
-        MyFile.open("Users.txt", std::ios::in);//read Mode
+        MyFile.open("Database/Users.txt", std::ios::in);//read Mode
 
         if (MyFile.is_open()) {
             std::string Line;
@@ -307,7 +307,7 @@ public:
         std::string stDataLine = _PrepareLoginRecord();
 
         std::fstream File;
-        File.open("Log.txt", std::ios::out | std::ios::app);
+        File.open("Database/Log.txt", std::ios::out | std::ios::app);
         if (File.is_open()){
             File << stDataLine << std::endl;
             File.close();
@@ -330,7 +330,7 @@ public:
         std::vector<stLoginRegisterRecord> vLoginRegisterRecord;
 
         std::fstream File;
-        File.open("Log.txt", std::ios::in); // read mode
+        File.open("Database/Log.txt", std::ios::in); // read mode
 
         if (File.is_open()){
             std::string Line;

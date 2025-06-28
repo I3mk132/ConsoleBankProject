@@ -33,7 +33,7 @@ private:
         std::fstream File;
         std::vector <clsCurrency> vCurrencies;
 
-        File.open("Currencies.txt", std::ios::in);
+        File.open("Database/Currencies.txt", std::ios::in);
         if (File.is_open()){
             std::string Line;
             while (getline(File, Line)){
@@ -46,7 +46,7 @@ private:
     static void _SaveCurrencyDataToFile(std::vector<clsCurrency> vCurrencies){
         std::fstream File;
 
-        File.open("Currencies.txt", std::ios::out);
+        File.open("Database/Currencies.txt", std::ios::out);
         if (File.is_open()){
             for (clsCurrency& Currency : vCurrencies){
                 File << _ConvertCurrencyObjectToLine(Currency) << std::endl;
@@ -114,7 +114,7 @@ public:
         CurrencyCode = clsString::UpperAllString(CurrencyCode);
         std::fstream File;
 
-        File.open("Currencies.txt", std::ios::in);
+        File.open("Database/Currencies.txt", std::ios::in);
 
         if (File.is_open()){
             std::string Line;
@@ -135,7 +135,7 @@ public:
         Country = clsString::UpperAllString(Country);
         std::fstream File;
 
-        File.open("Currencies.txt", std::ios::in);
+        File.open("Database/Currencies.txt", std::ios::in);
 
         if (File.is_open()){
             std::string Line;

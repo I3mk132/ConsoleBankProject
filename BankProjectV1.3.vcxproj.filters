@@ -36,6 +36,9 @@
     <Filter Include="Header Files\Core">
       <UniqueIdentifier>{3f7cbad3-32f1-4e6b-8c50-a392e0ba6930}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Database">
+      <UniqueIdentifier>{d26ec3ff-8cbb-4bdf-bc51-b9d161ec7739}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BankProjectV1.3.cpp">
@@ -151,5 +154,22 @@
     <ClInclude Include="Header Files\Core\clsUser.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Database\Clients.txt">
+      <Filter>Database</Filter>
+    </Text>
+    <Text Include="Database\Currencies.txt">
+      <Filter>Database</Filter>
+    </Text>
+    <Text Include="Database\Log.txt">
+      <Filter>Database</Filter>
+    </Text>
+    <Text Include="Database\TransfareLog.txt">
+      <Filter>Database</Filter>
+    </Text>
+    <Text Include="Database\Users.txt">
+      <Filter>Database</Filter>
+    </Text>
   </ItemGroup>
 </Project>
